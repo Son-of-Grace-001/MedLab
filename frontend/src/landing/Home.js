@@ -1,6 +1,4 @@
 import React from "react";
-
-
 import { Top } from "../components/Top";
 import { Nav } from "../components/Nav";
 import { Hero } from "../components/Hero";
@@ -8,6 +6,9 @@ import { Section } from "../components/Section";
 import {About} from "../components/About"
 import { Lab } from "../components/Lab";
 import { Service } from "../components/Service";
+import { Doctor } from "../components/Doctor";
+import { Contact } from "../components/Contact";
+import { Appointment } from "../components/Appointment";
 
 export const Home = () => {
   return (
@@ -19,6 +20,9 @@ export const Home = () => {
       <About/>
       <Lab/>
       <Service/>
+      <Appointment/>
+      <Doctor/>
+      <Contact/>
     </div>
   )
 }

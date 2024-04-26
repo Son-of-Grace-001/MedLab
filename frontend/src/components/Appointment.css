@@ -1,0 +1,27 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#appointment{
+  padding: 50px 100px 50px 100px;
+  background-color: #1979cc0b;
+}
+
+.form-grids{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.form{
+  margin-top: 40px;
+}
+
+.select{
+  height: 40px;
+  width: 100%;
+  border: 1px solid #b9b9b9;
+  margin-top: 4px;
+}
