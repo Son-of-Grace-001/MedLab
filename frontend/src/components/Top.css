@@ -1,0 +1,56 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px 100px 10px 100px ;
+  box-shadow: 10px 2px 5px #436f9917;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  z-index: 200;
+}
+
+a{
+  text-decoration: none;
+  color:#121212;
+}
+
+.right-div{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.twitter, 
+.facebook,
+.instagram,
+.linkedin{
+  margin-right: 15px;
+}
+
+.phone-div, .envelope{
+  display: flex;
+  align-items: center;
+}
+
+.left-div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.envelope{
+  margin-right: 15px;
+}
+
+.email{
+  margin-left: 10px;
+}

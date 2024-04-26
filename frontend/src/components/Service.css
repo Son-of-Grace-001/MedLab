@@ -1,0 +1,98 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#services{
+  padding: 50px 100px 50px 100px;
+}
+
+.serv{
+  text-align: center;
+  color: #437790;
+  font-size: 32px;
+}
+
+.ser{
+  text-align: center;
+  margin-top: 20px;
+  color: #12121297;
+}
+
+.line{
+  width: 140px;
+  height: 2px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.lin1, .lin2, .lin3{
+  width: 100%;
+  height: 100%;
+}
+
+.lin1, .lin3{
+  background-color: #b9b9b99a;
+}
+
+.lin2{
+  background-color: #437790;
+}
+
+.list-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.inner-list:hover{
+  background-color: #1977CC;
+  color: #fff;
+}
+
+.heart{
+  height: 60px;
+  width: 60px;
+  border-radius: 8px;
+  background-color: #1979cc3a;
+}
+
+.heart > div{
+  background-color: #1977CC;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  margin-top: 7px;
+  margin-left: 7px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-ico{
+  height: 30px;
+  width: 30px;
+  color: #fff;
+}
+
+.inner-list{
+  padding: 40px;
+  border: 1px solid #1979cc68;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #12121297;
+}
+
+.pppp{
+  margin-top: 25px;
+  text-align: center;
+}
+

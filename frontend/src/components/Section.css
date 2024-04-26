@@ -1,0 +1,89 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section{
+  padding: 0px 100px 0px 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 500px;
+  width: 100%;
+  align-items: center;
+  position: absolute;
+  margin-top: -200px;
+  z-index: 100;
+}
+
+.whys{
+  height: 475px;
+  width: 350px;
+  text-align: justify;
+  background-color: #1977CC;
+  color: #fff;
+  padding: 20px;
+}
+
+.lab{
+  font-size: 32px;
+}
+
+.chooses{
+  /* font-size: 18px; */
+  margin-top: 25px;
+}
+
+/* .btn-div{
+  width: 150px;
+  height: 40px;
+  margin: auto;
+  padding-bottom: 25px;
+} */
+
+.learns{
+  height:40px;
+  margin-top: 25px;
+  width: 150px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: #5fa7e785;
+  border: none;
+  /* margin-bottom: 25px; */
+  transition: background-color 0.9s ease;
+  margin-left: 80px;
+}
+
+.learns:hover{
+  background-color: white;
+  color: #1977CC;
+  cursor: pointer;
+}
+
+.divs{
+  width: 230px;
+  background-color: white;
+  box-shadow: 2px 5px 10px #b9b9b9;
+  height: 330px;
+  border-radius: 20px;
+  /* border: 1px solid #b9b9b931; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sit{
+  text-align: center;
+  font-size: 24px;
+  color: #444444;
+  margin-top: 25px;
+}
+
+.nisi{
+  color: #8493B5;
+  text-align: center;
+  margin-top: 25px;
+}
