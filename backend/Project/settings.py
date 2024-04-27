@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get ('secret_key')
+SECRET_KEY = 'django-insecure-q1x0(z9fa&c0y&p8-u_vz!)d65f9v9d1yc&hu0lx@s)v_mv^my'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'MedLab',
     'corsheaders',
     'celery',
-    'celery.contrib.django',
+    'celery.contrib.django'
 ]
 
 MIDDLEWARE = [
@@ -142,5 +142,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 SERVER_EMAIL = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = 587
+EMAIL_PORT = 465
 EMAIL_USE_TLS = True
+EMAIL_TIMEOUT = 600

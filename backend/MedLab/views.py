@@ -1,4 +1,8 @@
 # views.py
+from django.contrib import messages
+from django.core.mail import EmailMessage
+from django.conf import settings
+from django.core.mail import send_mail
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -33,8 +37,22 @@ class AppointmentView(APIView):
     )
     appointment.save()
 
-    appointment_datetime = datetime.combine(appointment.date, appointment.time)
-    send_appointment_reminder.apply_async(args=[appointment.id], eta=appointment_datetime)
+    subject = " Appoint Submission"
+    body = f"Hello Sir/Ma {name},\n\nWe at MedLab, received your appointment to meet Dr {doctor} in department of {department} which is to come up on {date} by {time}, we will send you a notification to remind you on the date.\n\n Thanks for trusting us. \n\nWarm Regards,\n\nMedLab\n"
+
+    mail = EmailMessage(subject= subject, body=body, from_email=settings.EMAIL_HOST_USER , to = [email])
+    mail.send()
+    
+    subject = "New message Alert"
+    body = f"A new appointment was received from {name} {phone} {email} to meet with Dr{doctor} in the department of {department} on {date} by {time}."
+    
+    mail = EmailMessage(subject= subject, body=body, from_email=settings.EMAIL_HOST_USER , to = [settings.EMAIL_HOST_USER])
+    mail.send()
+    messages.info(request, "Your message was sent successfully")
+
+
+    # appointment_datetime = datetime.combine(appointment.date, appointment.time)
+    # send_appointment_reminder.apply_async(args=[appointment.id], eta=appointment_datetime)
 
 
     # Return response
