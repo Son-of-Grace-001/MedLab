@@ -25,3 +25,9 @@
   border: 1px solid #b9b9b9;
   margin-top: 4px;
 }
+
+.date{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
