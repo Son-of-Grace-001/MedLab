@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -134,11 +135,11 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 
-EMAIL_FROM_USER = 'horlharmighty2000@gmail.com'
+EMAIL_FROM_USER = config ('EMAIL_FROM_USER')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-SERVER_EMAIL = 'horlharmighty2000@gmail.com'
-EMAIL_HOST_USER = 'horlharmighty2000@gmail.com'
-EMAIL_HOST_PASSWORD = 'ultjammdtqcwyhnz'
+SERVER_EMAIL = config ('SERVER_EMAIL')
+EMAIL_HOST_USER = config ('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config ('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
