@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'MedLab',
     'corsheaders',
-    'celery',
-    'celery.contrib.django'
 ]
 
 MIDDLEWARE = [
@@ -136,12 +134,11 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 
-EMAIL_FROM_USER = os.environ.get('EMAIL_FROM_USER')
+EMAIL_FROM_USER = 'horlharmighty2000@gmail.com'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-SERVER_EMAIL = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+SERVER_EMAIL = 'horlharmighty2000@gmail.com'
+EMAIL_HOST_USER = 'horlharmighty2000@gmail.com'
+EMAIL_HOST_PASSWORD = 'ultjammdtqcwyhnz'
 EMAIL_PORT = 465
-EMAIL_USE_TLS = True
-EMAIL_TIMEOUT = 600
+EMAIL_USE_SSL = True
