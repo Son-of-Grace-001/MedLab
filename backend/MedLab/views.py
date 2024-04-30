@@ -33,6 +33,7 @@ class AppointmentView(APIView):
             message=message
         )
         appointment.save()
+        print(date)
 
         # Email to the user
         user_subject = "Appointment Submission"
@@ -44,22 +45,11 @@ class AppointmentView(APIView):
         admin_message = f"A new appointment was received from {name} ({email}, {phone}) to meet with Dr {doctor} in the {department} department on {date} at {time}."
         send_mail(admin_subject, admin_message, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER])
 
-        self.Reminder()
-
-        # Return response
-        return Response({'message': 'Appointment booked successfully'})
-
-
-    def Reminder(self):
         today = timezone.now().date()
-
-        appointments_today = Appointment.objects.filter(date=today)
-
-        # Iterate over appointments for today
-        for appointment in appointments_today:
+        print(today)
+        if today == date:
             subject = "Appointment Reminder"
             message = f"Hi {appointment.name},\n\nThis is a reminder that your appointment with {appointment.doctor} in the {appointment.department} department is scheduled for today at {appointment.time}.\n\nRegards,\nMedLab"
             send_mail(subject, message, settings.EMAIL_HOST_USER, [appointment.email])
 
-            # Optionally, you can update the appointment status to indicate that a reminder has been sent
-            appointment.reminder_sent = True
+        return Response({'message': 'Appointment booked successfully'})
