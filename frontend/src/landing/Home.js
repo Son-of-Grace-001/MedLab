@@ -9,6 +9,7 @@ import { Service } from "../components/Service";
 import { Doctor } from "../components/Doctor";
 import { Contact } from "../components/Contact";
 import { Appointment } from "../components/Appointment";
+import {Footer} from "../components/Footer";
 
 export const Home = () => {
   return (
@@ -23,6 +24,7 @@ export const Home = () => {
       <Appointment/>
       <Doctor/>
       <Contact/>
+      <Footer/>
     </div>
   )
 }

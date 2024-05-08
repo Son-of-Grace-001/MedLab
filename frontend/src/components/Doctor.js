@@ -38,49 +38,17 @@ export const Doctor = () => {
             </div>
             <div className='gba'>
               <div className='ok'>
-                <div className='fb-cont'>
-                  <FaFacebook className='fb'/>
+                <div className='fb-conts'>
+                  <FaFacebook className='fbs'/>
                 </div>
-                <div className='fb-cont'>
-                  <FaTwitter className='fb'/>
+                <div className='fb-conts'>
+                  <FaTwitter className='fbs'/>
                 </div>
-                <div className='fb-cont'>
-                  <FaInstagram className='fb'/>
+                <div className='fb-conts'>
+                  <FaInstagram className='fbs'/>
                 </div>
-                <div className='fb-cont'>
-                  <FaLinkedin className='fb'/>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div className='inner-doc'>
-            <div className='flex-d'>
-              <img src={doctor_1} alt='doctor'/>
-            </div>
-          </div>
-          <div className='text-doc'>
-            <div>
-              <h3 className='text-name'>Olajire Stephen</h3>
-              <p className='text-post'>Chief Medical Office</p>
-              <div className='linee'></div>
-              <p className='hi'>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-            </div>
-            <div className='gba'>
-              <div className='ok'>
-                <div className='fb-cont'>
-                  <FaFacebook className='fb'/>
-                </div>
-                <div className='fb-cont'>
-                  <FaTwitter className='fb'/>
-                </div>
-                <div className='fb-cont'>
-                  <FaInstagram className='fb'/>
-                </div>
-                <div className='fb-cont'>
-                  <FaLinkedin className='fb'/>
+                <div className='fb-conts'>
+                  <FaLinkedin className='fbs'/>
                 </div>
               </div>
             </div>
@@ -102,17 +70,49 @@ export const Doctor = () => {
             </div>
             <div className='gba'>
               <div className='ok'>
-                <div className='fb-cont'>
-                  <FaFacebook className='fb'/>
+                <div className='fb-conts'>
+                  <FaFacebook className='fbs'/>
                 </div>
-                <div className='fb-cont'>
-                  <FaTwitter className='fb'/>
+                <div className='fb-conts'>
+                  <FaTwitter className='fbs'/>
                 </div>
-                <div className='fb-cont'>
-                  <FaInstagram className='fb'/>
+                <div className='fb-conts'>
+                  <FaInstagram className='fbs'/>
                 </div>
-                <div className='fb-cont'>
-                  <FaLinkedin className='fb'/>
+                <div className='fb-conts'>
+                  <FaLinkedin className='fbs'/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className='inner-doc'>
+            <div className='flex-d'>
+              <img src={doctor_1} alt='doctor'/>
+            </div>
+          </div>
+          <div className='text-doc'>
+            <div>
+              <h3 className='text-name'>Olajire Stephen</h3>
+              <p className='text-post'>Chief Medical Office</p>
+              <div className='linee'></div>
+              <p className='hi'>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+            </div>
+            <div className='gba'>
+              <div className='ok'>
+                <div className='fb-conts'>
+                  <FaFacebook className='fbs'/>
+                </div>
+                <div className='fb-conts'>
+                  <FaTwitter className='fbs'/>
+                </div>
+                <div className='fb-conts'>
+                  <FaInstagram className='fbs'/>
+                </div>
+                <div className='fb-conts'>
+                  <FaLinkedin className='fbs'/>
                 </div>
               </div>
             </div>
@@ -136,17 +136,17 @@ export const Doctor = () => {
             </div>
             <div className='gba'>
               <div className='ok'>
-                <div className='fb-cont'>
-                  <FaFacebook className='fb'/>
+                <div className='fb-conts'>
+                  <FaFacebook className='fbs'/>
                 </div>
-                <div className='fb-cont'>
-                  <FaTwitter className='fb'/>
+                <div className='fb-conts'>
+                  <FaTwitter className='fbs'/>
                 </div>
-                <div className='fb-cont'>
-                  <FaInstagram className='fb'/>
+                <div className='fb-conts'>
+                  <FaInstagram className='fbs'/>
                 </div>
-                <div className='fb-cont'>
-                  <FaLinkedin className='fb'/>
+                <div className='fb-conts'>
+                  <FaLinkedin className='fbs'/>
                 </div>
               </div>
             </div>

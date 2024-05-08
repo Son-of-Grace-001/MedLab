@@ -57,7 +57,7 @@
   display: flex;
 }
 
-.fb-cont{
+.fb-conts{
   margin-right: 10px;
   height: 32px;
   width: 32px;
@@ -68,7 +68,7 @@
   justify-content: center;
 }
 
-.fb{
+.fbs{
   color: #fff;
   height: 16px;
   width: 16px;

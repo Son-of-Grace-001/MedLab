@@ -1,8 +1,33 @@
 import React from 'react'
 import { FaMapMarker, FaEnvelope, FaPhone } from 'react-icons/fa'
 import './Contact.css'
+import {useState} from 'react'
 
 export const Contact = () => {
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [subject, setSubject] = useState ('')
+
+  const handleSubmit = async (e) => {
+    try{
+      const response = await fetch ('http://127.0.0.1:8000/api/contact/',{
+        method: 'POST',
+        headers:{
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify ({name, email, message, subject}),
+      });
+      if (response.ok) {
+        alert ('Your message is sent successfully')
+      }else{
+        alert ('An error occured pls try again')
+      }
+    }catch (error){
+      console.error (error)
+    }
+  }
   return (
     <div id='contact'>
       <h3 className='serv'> Contact Us</h3>

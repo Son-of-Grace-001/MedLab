@@ -53,4 +53,17 @@ a{
 
 .email{
   margin-left: 10px;
+  color:#121212;
+}
+
+.mail-ico{
+  margin-bottom:8px;
+}
+
+.phone{
+  color: #121212;
+}
+
+.phone-ico{
+  margin-bottom:8px;
 }
