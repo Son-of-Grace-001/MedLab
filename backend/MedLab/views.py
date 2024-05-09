@@ -62,7 +62,7 @@ class AppointmentView(APIView):
             message = f"Hi {appointment.name},\n\nThis is a reminder that your appointment with {appointment.doctor} in the {appointment.department} department is scheduled for today at {appointment.time}.\n\nRegards,\nMedLab"
             send_mail(subject, message, settings.EMAIL_HOST_USER, [appointment.email])
 
-        return Response({'message': 'Appointment booked successfully'})
+        return Response({'message': 'Appointment booked successfully'}, status=201)
 
 
 class ContactView (APIView):
@@ -73,7 +73,7 @@ class ContactView (APIView):
         message = request.data.get ('message')
 
         if not name or not email or not subject or not message:
-            return Response ({'message': 'All fields are required'})
+            return Response ({'message': 'All fields are required'}, status=400)
         
         contact = Contact.objects.create(
             name = name,
@@ -84,11 +84,11 @@ class ContactView (APIView):
         contact.save()
 
         subject = "Message Received"
-        message = f"Hello {name} \n\n We at MedLab has received your message and we will get back to you as soon as possible. \n\n Warm Regards \n\n Thank you"
+        message = f"Hello {name} \n\n We at MedLab have received your message and we will get back to you as soon as possible. \n\n Warm Regards \n\n Thank you"
         send_mail (subject, message, settings.EMAIL_HOST_USER, [contact.email])
 
         subject = "New Message"
         message = f"A new message was received from {name} with the email {email}, pls attend to it"
-        send_mail = (message, subject, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER])
+        send_mail (subject, message, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER])
 
-{}
+        return Response({'message': 'Contact created successfully'}, status=201)

@@ -11,8 +11,10 @@ export const Contact = () => {
   const [subject, setSubject] = useState ('')
 
   const handleSubmit = async (e) => {
+    e.preventDefault();
+
     try{
-      const response = await fetch ('http://127.0.0.1:8000/api/contact/',{
+      const response = await fetch ('http://127.0.0.1:8000/api/contacts/', {
         method: 'POST',
         headers:{
           'Content-Type': 'application/json',
@@ -21,7 +23,8 @@ export const Contact = () => {
       });
       if (response.ok) {
         alert ('Your message is sent successfully')
-      }else{
+      }
+      else{
         alert ('An error occured pls try again')
       }
     }catch (error){
@@ -70,23 +73,43 @@ export const Contact = () => {
         </div>
 
         <div className='right-contact'>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className='form-grid'>
               <div>
                 <label>Name</label>
-                <input type='text' placeholder='Enter your full name'/> 
+                <input 
+                  type='text' 
+                  placeholder='Enter your full name'
+                  value={name}
+                  onChange= {(e) => setName (e.target.value)}
+                /> 
               </div>
               <div>
                 <label>Email</label>
-                <input type='email' placeholder='example@gmail.com'/>
+                <input 
+                  type='email' 
+                  placeholder='example@gmail.com'
+                  value={email}
+                  onChange={(e) => setEmail (e.target.value)}
+                />
               </div>
             </div>
 
             <label>Subject</label>
-            <input type='text' placeholder='Enter the subject of your message'/>
+            <input 
+              type='text' 
+              placeholder='Enter the subject of your message'
+              value={subject}
+              onChange = {(e) =>  setSubject (e.target.value)}
+            />
 
             <label>Message</label>
-            <textarea cols={20} rows={10} placeholder='Message'></textarea>
+            <textarea 
+              cols={20} rows={10} 
+              placeholder='Message'
+              value={message}
+              onChange={(e) => setMessage (e.target.value)}
+            ></textarea>
 
             <div className='submit-btn'>
               <button type='submit' className='submitt'> Submit</button>
